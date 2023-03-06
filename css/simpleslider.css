@@ -1,0 +1,132 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+#carousel {
+	margin: 0 auto;
+	height: 400px;
+	width: 400px;
+	border: 1px solid black;
+	overflow: hidden;
+	position: relative;
+}
+
+ul li {
+	display: inline-block;
+	height: 400px;
+	width: 400px;
+	list-style: none;
+	float: left;
+}
+
+ul {
+	margin: 0 auto;
+	padding: 0;
+	width: 2000px;
+	position: absolute;
+}
+
+img {
+	height: 400px;
+	width: 400px;
+	display: block;
+}
+
+[class*="carousel-button"] {
+	position: absolute;
+	transform: translate(0, -50%);
+	height: 30px;
+	width: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.carousel-button-slide-left {
+	left: 0;
+	top: 50%;
+	z-index: 2;
+}
+
+.carousel-button-slide-left:hover span {
+	color: grey;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.carousel-button-slide-left span {
+	color: white;
+	top: 50%;
+	transform: translate(0, -50%);
+	position: absolute;
+	transition: 0.5s;
+	font-size: 30px;
+}
+
+.carousel-button-slide-left span:hover {
+	color: grey;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.carousel-button-slide-right {
+	right: 0;
+	top: 50%;
+}
+
+.carousel-button-slide-right:hover span {
+	color: grey;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.carousel-button-slide-right span {
+	color: white;
+	top: 50%;
+	transform: translate(0, -50%);
+	position: absolute;
+	transition: 0.5s;
+	font-size: 30px;
+	right: 0;
+}
+
+.carousel-button-slide-right span:hover {
+	color: grey;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.carousel-controls {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	text-align: center;
+	width: 400px;
+}
+
+.dot {
+	background-color: #ccd4e2;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #ccd4e2;
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.active {
+	width: 8px;
+	height: 8px;
+	background-color: #293df2;
+	border-color: #293df2;
+	display: inline-block;
+}
+
+.inactive {
+	background-color: #ccd4e2;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #ccd4e2;
+	display: inline-block;
+}
