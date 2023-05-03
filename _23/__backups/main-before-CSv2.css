@@ -8,14 +8,6 @@
         --ph-filter-white : invert(100%) sepia(0%) saturate(0%) hue-rotate(110deg) brightness(102%) contrast(103%);
         --fa-icon : 'Font Awesome 6 Pro';
         --fa-light : 300;
-        
-        --bg-grey-100 : #F9F9F9;
-        --bg-grey-200 : #f1f1f1;
-/*        EAEAEC*/
-        --bg-grey-300 : #E9E9E9;
-        --bg-grey-900 : #C6C6C6;
-        --vw-primary : #207570;
-        --vw-lite : #63bcb6;
       }
 /* === Basic Style === */
 body {
@@ -747,7 +739,109 @@ vertical-align: middle;
 }
 #contact .hover-underline:after {margin-bottom: -6px;}
 
+/*== CS Pages
+==================================================================*/
+body.cs {margin-top: 60px;}
+body.cs section {background: rgba(230,230,230,1);}
+.cs .studies h6 { color: rgb(var(--ph_primary)); margin-bottom: 30px;}
+.cs .studies p { 
+    color: var(--ph_darktext, #e6e6e6);
+    margin-bottom: 12px;
+    font-size: 14px;}
+.cs .studies h3 {
+    margin-top: 0;
+    padding-right: 10px;}
+.cs .studies section .container {
+/*    border: 1px solid green; */
+    padding-top: 20px; padding-bottom: 20px; max-width: 1000px;}
+/*    .cs #vwg.studies section#hero .row {position: relative; display: block;}*/
+.cs #vwg.studies section#hero {background: transparent;}
+.cs #vwg.studies section#hero .container {
+    padding-top: 40px; padding-bottom: 20px; max-width: 1000px;}
+.cs .studies section .parallax { margin: 0; padding: 0; height: 100%;}
+.cs .studies section .parallax img {width: 80%; height: auto; padding: 40px 0 0;}
+span.cs-detail-label { width: 70px; display: inline-block;margin-right: 6px; float: left; font-weight: 300; color: var(--ph_litetext)}
+.cs #vwg #para-0 .container {width: 100%; height: 100%;}
+/*.cs #vwg #para-0 .container .row {height: 600px;}background: rgba(0,0,0,0.8); padding: 25px; */
+.cs-info {margin-left: 15px; color: white;}
+.cs-info p { letter-spacing: 1px; line-height: 1.8em; color: white!important;}
+.cs .studies #cs-slider {
+    background: rgba(127, 17, 224, 0.1);
+    padding-top: 30px; padding-bottom: 30px;}
+.cs .studies #cs-slider .temp {
+    background: rgba(0,0,0,0.3); height: 400px; width: 100%; display: block;}
+.cs main.studies { margin-top: 40px;}
+.cs .studies section {padding: 0;}
+/*.cs .cards .container {padding: 0;}*/
+.cs .row {margin: 20px 0 40px;}
+.cs .row div div { padding: 0;}
+/*.cs section.cards {background: transparent;}*/
+/*.cs .row div div:first-of-type {padding-right: 10px;}*/
+.cs .cards-3 { display: block; margin: 0; width: 100%; text-align: center; counter-reset: line-number;}
+.cs .cards-3 .card {display: inline-block; background: white; padding: 12px; width: 32%; text-align: left; border-radius: 8px; vertical-align: top;
+    margin-right: 1%; counter-increment: line-number; box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4);}
+.cs .cards-3 .card img {width: 100%; height: auto;}
+.cs .cards-3 .card h4 {color: var(--ph_darktext); margin: 16px 0 0; line-height: 1.2em; }
+.cs .cards-3 .card h4:before {
+    content: counter(line-number)") ";
+    width: 20px; height: 60px; float: left;
+}
+.cs .cards-3 .card p {clear: both;}
+/*.cs .card-third {display: inline-block; height: 380px; background: lightgrey; padding: 20px; border: 1px solid darkgray;}*/
+.cs .img-framed {
+    background: #f4f4f4;
+    border: 12px solid #f4f4f4; 
+    box-shadow: 0 2px 20px -6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;}
+.cs .img-framed.sm {
+     background: #f4f4f4;
+    width: 50%; max-width: 400px;
+    height: auto;
+    border: 8px solid #f4f4f4;
+    border-bottom: 12px solid #f4f4f4;;
+    box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.3);
+    }
+.img-framed img {border: 1px solid red!important;}
+.cs p.captiontext {font-size: 0.9em; color: var(--ph_midtext); margin: 12px 0 0 0; }
 
+.cs .img-absolute {position: absolute; top: -10px; right: 0;}
+.cs .case-nav {background-color: black; color: white;}
+.cs .case-nav div {border: 1px solid white; display: block;  color: white!important;}
+.case-nav .row {height: 100%; background: red; width: 100%; display: inline;}
+#cs-prev i, #cs-prev p {float:left; padding-right: 12px; border: 1px solid blue; display: block; height: 50px;}
+#cs-next i, #cs-next p {float:right; padding-left: 12px;border: 1px solid blue; height: 50px;}
+.cs main.studies ul {
+    column-count: 2;
+    column-gap: 8%;
+}
+.cs main.studies ul li:before {
+ content: "-";
+ margin-right: 6px;
+}
+.cs main.studies ul li {
+    font-size: 1em;
+    display: block;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    border: 1px solid pink;
+}
+h6.line {
+  display: table;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+h6.line:after {
+  border-top: 1px solid var(--ph_midtext);
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.5em;
+  width: 100%;
+  left: 1.5%;
+}
+.object-fit-cover {width: 100%; height: 100%; object-fit: cover;}
+.cs-tag {padding: 0 8px; border-radius: 4px; display: inline-block; background-color: var(--ph_litetext); color: var(--ph_darktext); font-size: 9px; text-transform: uppercase; margin-right: 6px;}
 /*============================================================ 
 	Responsive Styles
  ============================================================*/
@@ -870,11 +964,11 @@ border-bottom: 200px solid var(--ph_litetext);}
     .row.case.vw img.case-img {display: none;}
     .row.case.vw img.case-img.mob {display: block!important;}
     .footer-content {width: 380px;}
-/*    .cs .cards-3 .card { display: block; width: 70%; max-width: 360px; margin: 20px auto;}
+    .cs .cards-3 .card { display: block; width: 70%; max-width: 360px; margin: 20px auto;}
     .cs .img-framed {
         border: 6px solid #f4f4f4;
         box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.3);}
-    .cs .img-framed.sm { width: 100%;}*/
+    .cs .img-framed.sm { width: 100%;}
 /* animation */
 .text {
   width: 300px;
@@ -896,7 +990,36 @@ border-bottom: 200px solid var(--ph_litetext);}
 @media (print), (prefers-reduced-motion: reduce) {
   .animated {display: block;}
 }
-
+/* bg images for case studies */
+.cs .studies section .parallax.bg-img { 
+    background-image: url('https://loremflickr.com/1200/600/files, office'); 
+    background-attachment: fixed;
+    background-position: center center;
+    height: 400px; }
+    .parallax.bg-img.overlay {box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);}
+    .parallax.bg-img.shadow {box-shadow: inset 0 0 100px -10px rgba(0, 0, 0, 0.6);}
+    .cs #axs-1 { background-image: url('https://loremflickr.com/1200/600/audience,crowd');}
+    .cs #axs-2 { background-image: url('https://loremflickr.com/1200/600/live,gig');}
+    .cs #axs-3 { background-image: url('https://loremflickr.com/1200/600/matrix,code,dark');}
+    .cs #axs-4 { background-image: url('https://loremflickr.com/1200/600/theo2');}
+    .cs #sam-1 { background-image: url('https://loremflickr.com/1200/600/mobile,phone');}
+    .cs #sam-2 { background-image: url('https://loremflickr.com/1200/600/webpage,computer');}
+    .cs #sam-3 { background-image: url('https://loremflickr.com/1200/600/washer,dryer,laundry');}
+    .cs #sam-4 { background-image: url('https://loremflickr.com/1200/600/tablet,device');}
+    .cs #vwg #hero {background-color: white;}
+    .cs #vwg #hero .row {background: rgba(0,0,0,0.8); height: 200px; margin-top: 240px;}
+    .cs #vwg #para-0 { background-image: url('../img/cs/vw/home-case-vw-mob.png'); width: 100%; background-size: 100%; background-position: top center; height: 440px; overflow: hidden; box-shadow: none;}
+    .cs #vwg #para-0 img {width: 90%; padding-top: 10px; margin-top: -240px;}
+    .cs #vwg #para-1 { background-image: url('https://loremflickr.com/1200/600/car,motorway,drive');}
+    .cs #vwg #para-2 { background-image: url('https://loremflickr.com/1200/600/campervan,vw');}
+    .cs #vwg .cards { background: url('../img/cs/vw/vw-para-disco.png') no-repeat; background-size: 100%;
+        background-position: center center;}
+    .cs #vwg #para-4 { height: auto; }
+    .cs #twc-0 { background-image: url('https://loremflickr.com/1200/600/candle,fire,flame');}
+    .cs #twc-1 { background-image: url('https://loremflickr.com/1200/600/sea,shell,sand,waves');}
+    .cs #twc-2 { background-image: url('https://loremflickr.com/1200/600/driftwood,forest,leaves');}
+    .cs #twc-3 { background-image: url('https://loremflickr.com/1200/600/woolen,cardigan,jumper');}
+    .cs #twc-4 { background-image: url('https://loremflickr.com/1200/600/fashion,designer,model');}
 
 /* == testing, innit == */
 .greenbg {background: green !important; display: block;}

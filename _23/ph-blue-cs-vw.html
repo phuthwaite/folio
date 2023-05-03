@@ -97,7 +97,7 @@
 <main class="site-content studies" role="main" id="vwg">
 
 <section id="hero">
-		<div class="parallax bg-img overlay" id="para-0">
+		<div class="bg-img overlay" id="para-0" data-0="transform: translateY(0px);" data-top-bottom="transform: translateY(400px);">
 			<div class="row"><!-- row before container only for this instance -->
 				<div class="container">
 					<div class="col-sm-5 col-xs-11 self-center cs-info">
@@ -171,7 +171,7 @@
 <section>
 		<div class="container">
 				<div class="row">
-					<div class="col-xs-12 red invert">
+					<div class="col-xs-12 invert">
 						<h6 class="line">Process</h6>
 							<div class="col-sm-3 col-md-4 blue" id="title6"></div>
 							<div class="col-sm-9 col-md-8 orange" id="content6"></div>
@@ -180,16 +180,16 @@
 			</div><!-- /container -->
 </section>
 
-<section>
+<!--<section>
 			<div class="parallax bg-img overlay" id="para-3">
-				<div class="slide-caption"></div><!-- /caption -->
-			</div><!-- /para -->
-</section>
+				<div class="slide-caption"></div>
+			</div> 
+</section>/para -->
 
 <section class="cards">
 		<div class="container">
 			<div class="row">
-				<div class="cards-3 red invert">
+				<div class="cards-3 invert">
 					<div class="card">
 						<img src="img/cs/vw/vw-disco-1-data.png">
 						<h4>Organising and Categorising Assets</h4>
@@ -214,11 +214,11 @@
 		</div><!-- /container -->
 </section>
 
-<section>
+<!--<section>
 			<div class="parallax bg-img overlay" id="para-3">
-				<div class="slide-caption"></div><!-- /caption -->
-			</div><!-- /para -->
-</section>
+				<div class="slide-caption"></div>
+			</div>
+</section> /para -->
 
 
 <section>
@@ -232,11 +232,11 @@
 		</div><!-- /container -->
 </section><!-- /1-col -->
 
-<section id="sl-slider"><!-- divider images -->
-			<div class="parallax bg-img text-center" id="para-4">
-
-			<img src="img/cs/vw/vw-email-multi-trans.png" width="1074" height="573" alt="Multi-Brand Emails Created with DS">
-			<!-- <p class="captiontext">Multi-Brand Emails Created with DS</p> -->
+<section><!-- divider images -->
+			<!-- <div class="parallax bg-img text-center" id="para-4"> -->
+		<div class="img-framed">
+			<img src="img/cs/vw/vw-email-all-crop.png" width="1074" height="573" alt="Multi-Brand Emails Created with DS">
+			<p class="captiontext">Multi-Brand Reponsive Emails, Created with DS</p>
 
 				<!--<div class="slide-caption"></div> /caption -->
 			</div><!-- /para -->
@@ -269,38 +269,43 @@
 <section><!-- end images -->
 	<div class="container">
 		
-			<div class="img-framed sm">
-				<img src="img/cs/vw/vw-brand-lib-cu-bg.png" width="100%" alt="cu elements">
+		<div class="img-framed sm">
+				<img src="img/cs/vw/vw-brand-lib-au.png" width="100%" alt="au elements">
+				<p class="captiontext">AUDI Library Elements</p>
+		</div><!-- / img -->
+
+		<div class="img-framed sm">
+				<img src="img/cs/vw/vw-brand-lib-cu.png" width="100%" alt="cu elements">
 				<p class="captiontext">CUPRA Library Elements</p>
-			</div><!-- / img -->
+		</div><!-- / img -->
 
 			<div class="img-framed sm">
 				<img src="img/cs/vw/vw-guidance-basecomps.png" width="100%" alt="core components">
-				<p class="captiontext">Core Components Documentation</p>
+				<p class="captiontext">Documentation of Core Components</p>
 			</div><!-- / img -->
 		<div class="img-framed sm">
 			<img src="img/cs/vw/vw-core-styles.png" width="100%" alt="multi brand emails">
-			<p class="captiontext">Core Styles & Elements Documentation</p>
+			<p class="captiontext">Documentation of Core Styles & Elements</p>
 		</div>
 		<div class="img-framed">
 			<img src="img/cs/vw/vw-ds-structure.png" width="100%" alt="system structure">
-			<p class="captiontext">Developing the System Structure</p>
+			<p class="captiontext">Planning the Design System Structure</p>
 		</div><!-- / img -->
 		<div class="img-framed">
 			<img src="img/cs/vw/vw-comps-prog.png" width="100%" alt="component progression">
-			<p class="captiontext">Component Progression</p>
+			<p class="captiontext">Progressive Development of Components</p>
 		</div><!-- / img -->
 		<div class="img-framed">
 			<img src="img/cs/vw/vw-para-brand-lib-vw.png" width="100%" alt="vw library">
 			<p class="captiontext">VW Library Documentation</p>
 		</div><!-- / img -->
 		<div class="img-framed">
-			<img src="img/cs/vw/vw-para-wtf.png" width="100%" alt="workflow">
-			<p class="captiontext">Snippets from Figma Workflow Guide</p>
-		</div><!-- / img -->	
-		<div class="img-framed">
 			<img src="img/cs/vw/vw-para-brand-lib-au.png" width="100%" alt="au library">
 			<p class="captiontext">AUDI Library Documentation</p>
+		</div><!-- / img -->	
+		<div class="img-framed">
+			<img src="img/cs/vw/vw-para-wtf.png" width="100%" alt="workflow">
+			<p class="captiontext">Figma Workflow Guide</p>
 		</div><!-- / img -->	
 </div><!-- /container -->
 </section>
@@ -332,6 +337,7 @@
   <script src="fa/js/all.js"></script>
   <script src="js/vivus.js"></script><!-- logoani -->
   <script src="js/wow.min.js"></script><!-- scroll ani -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js'></script>
   <script src="js/main.js"></script><!-- custom -->
 </body>
 </html>

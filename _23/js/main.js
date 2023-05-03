@@ -4,6 +4,23 @@
 // 	$("#preloader").fadeOut("slow");
 // });
 
+// $(function(){
+//     var $el = $('#wrapper3');     
+//     $(window).scroll(function () {
+//         para($el);
+//     });
+//     para($el);
+// });
+// var speed = 0.2;
+// function para($el) {
+//     var diff = $(window).scrollTop() - $el.offset().top;
+//     var yPos = -(diff * speed);
+//     var coords = '50% ' + yPos + 'px';
+//     $el.css({
+//         backgroundPosition: coords
+//     });
+// }
+
 /*  Welcome Section Slider */
 $(function() {
     // var Page = (function() {
@@ -44,29 +61,51 @@ $(function() {
     // })();
     // Page.init();
 });
+
 var $stopAnimation = false;
+
 $(document).ready(function(){
 /* load case study content */
-    $( "#title1" ).load( "cs-vw.html #title1" );
-    $( "#content1" ).load( "cs-vw.html #content1" );
-    $( "#title2" ).load( "cs-vw.html #title2" );
-    $( "#content2" ).load( "cs-vw.html #content2" );
-    $( "#title3" ).load( "cs-vw.html #title3" );
-    $( "#content3" ).load( "cs-vw.html #content3" );
-    $( "#title4" ).load( "cs-vw.html #title4" );
-    $( "#content4" ).load( "cs-vw.html #content4" );
-    $( "#title5" ).load( "cs-vw.html #title5" );
-    $( "#content5" ).load( "cs-vw.html #content5" );
-    $( "#title6" ).load( "cs-vw.html #title6" );
-    $( "#content6" ).load( "cs-vw.html #content6" );
-    $( "#title7" ).load( "cs-vw.html #title7" );
-    $( "#content7" ).load( "cs-vw.html #content7" );
-    $( "#title8" ).load( "cs-vw.html #title8" );
-    $( "#content8" ).load( "cs-vw.html #content8" );
-    $( "#title9" ).load( "cs-vw.html #title9" );
-    $( "#content9" ).load( "cs-vw.html #content9" );
-    $( "#title10" ).load( "cs-vw.html #title10" );
-    $( "#content10" ).load( "cs-vw.html #content10" );
+
+    /* 
+    within -externalhtml-
+    for each -section-
+    grab the -contents- 
+    and put it into the -containers- 
+    */
+    $( "#_1-0" ).load( "cs-vw.html #_1-0" );
+        $( "#_1-1" ).load( "cs-vw.html #_1-1" );
+    $( "#_2-0" ).load( "cs-vw.html #_2-0" );
+        $( "#_2-1" ).load( "cs-vw.html #_2-1" );
+        $( "#_2-2" ).load( "cs-vw.html #_2-2" );
+        $( "#_2-3" ).load( "cs-vw.html #_2-3" );
+        $( "#_2-4" ).load( "cs-vw.html #_2-4" );
+    $( "#_3-0" ).load( "cs-vw.html #_3-0" );
+        $( "#_3-1" ).load( "cs-vw.html #_3-1" );
+        $( "#_3-2" ).load( "cs-vw.html #_3-2" );
+        $( "#_3-3" ).load( "cs-vw.html #_3-3" );
+        $( "#_3-4" ).load( "cs-vw.html #_3-4" );
+    $( "#_4-0" ).load( "cs-vw.html #_4-0" );
+        $( "#_4-1" ).load( "cs-vw.html #_4-1" );
+    $( "#_5-0" ).load( "cs-vw.html #_5-0" );
+        $( "#_5-1" ).load( "cs-vw.html #_5-1" );
+        $( "#_5-2" ).load( "cs-vw.html #_5-2" );
+    $( "#_6-0" ).load( "cs-vw.html #_6-0" );
+        $( "#_6-1" ).load( "cs-vw.html #_6-1" );
+        $( "#_6-2" ).load( "cs-vw.html #_6-2" );
+        $( "#_6-3" ).load( "cs-vw.html #_6-3" );
+        $( "#_6-4" ).load( "cs-vw.html #_6-4" );
+        $( "#_6-5" ).load( "cs-vw.html #_6-5" );
+        $( "#_6-6" ).load( "cs-vw.html #_6-6" );
+    $( "#_7-0" ).load( "cs-vw.html #_7-0" );
+        $( "#_7-1" ).load( "cs-vw.html #_7-1" );
+    $( "#_8-0" ).load( "cs-vw.html #_8-0" );
+        $( "#_8-1" ).load( "cs-vw.html #_8-1" );
+        $( "#_8-2" ).load( "cs-vw.html #_8-2" );
+        $( "#_8-3" ).load( "cs-vw.html #_8-3" );
+    $( "#_9-0" ).load( "cs-vw.html #_9-0" );
+        $( "#_9-1" ).load( "cs-vw.html #_9-1" );
+        $( "#_9-2" ).load( "cs-vw.html #_9-2" );
 
 });
 
@@ -138,5 +177,10 @@ var sayit = document.getElementById("huth");
 function playAudio() { 
   sayit.play(); 
 } 
+
+var s = skrollr.init({
+  smoothScrolling: false,
+  forceHeight: false
+});
 
 document.getElementById('current-year').innerHTML = new Date().getFullYear();
