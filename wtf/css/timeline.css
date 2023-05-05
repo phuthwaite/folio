@@ -1,0 +1,130 @@
+.wrapper {
+  height: auto;
+  color: #fff;
+/*  position: relative;*/
+
+}
+section {
+  height: 100vh;
+  font-size: 40px;
+  font-weight: 100;
+  background-color: #22A7F0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1) {  background: white;}
+section:nth-child(2) {  background: #F64747;}
+section:nth-child(3) {  background: #22A7F0;}
+section:nth-child(4) {  background: #F9690E;}
+section:nth-child(5) {  background: #9B59B6;}
+section:nth-child(6) {  background: #03C9A9;}
+section:nth-child(7) {  background: #ffcc00;}
+
+.nav__wrapper {
+  position: fixed;
+/*  top: 30%;*/
+padding-top: 65%;
+  height: 100%;
+/*  padding-left: 30px;*/
+margin-left: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+/*  justify-content: center;
+     background: rgba(0,0,0,0.5); */
+     width: 45%;
+     border-left: 3px solid white;
+}
+.nav {
+  /*margin: 75% 0 0 30px;*/
+  margin-left: 30px;
+  position: absolute;
+  margin-bottom: 180px;
+/*  border: 1px solid red;*/
+}
+.nav__counter {
+  font-size: 20px;
+  transition: all 0.15s ease-out;
+  margin: 0;
+}
+.nav__title {
+  margin: 0;
+  height: 0;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav__body {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav li {
+  position: relative;
+  transition: all 0.3s ease-out;
+  margin-bottom: 1em; /* extra space between notches */
+}
+.nav li:after { /* notches */
+  content: "";
+  display: block;
+/*  border-left: 2px solid white;*/
+  border-top: 2px solid white;
+/*  height: 100%;*/
+  width: 20px;
+  position: absolute;
+  padding-bottom: 74%;
+  left: -32px;
+  top: 10px;
+}
+.nav li a {
+  display: block;
+  padding: 0;
+  color: #fff;
+  transition: all 0.15s ease-out;
+}
+.nav li a:hover {
+  background-color: transparent;
+  padding-left: 1em;
+}
+.nav li a:focus {
+  background-color: transparent;
+}
+.nav li.active {
+  pointer-events: none;
+/*  padding-left: 1em;*/
+  height: auto;
+/*  background: rgba(12,21,189,0.2);*/
+    background: rgba(255,255,255,.8);
+  border-radius: 8px;
+  padding: 1.2em;
+}
+.nav li.active:after {
+    width: 32px;
+/*    height: 200%;*/
+    top: 2.4em;
+/*  background: rgba(255,255,255,0.8);*/
+}
+.nav li.active .nav__counter {
+  font-size: 28px;
+  line-height: 32px;
+    color: slategrey;
+}
+.nav li.active .nav__title {
+  font-size: 18px;
+  height: auto;
+  line-height: 26px;
+  opacity: 1;
+    color: black;
+    font-weight: 400;
+}
+.nav li.active .nav__body {
+  height: auto;
+  opacity: 1;
+  overflow: visible;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: black;
+}
