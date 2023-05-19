@@ -21,6 +21,8 @@
 //     });
 // }
 
+// 
+
 /*  Welcome Section Slider */
 $(function() {
     // var Page = (function() {
@@ -65,61 +67,60 @@ $(function() {
 var $stopAnimation = false;
 
 $(document).ready(function(){
-/* load case study content */
+document.getElementById('current-year').innerHTML = new Date().getFullYear();
 
-    /* 
+/* load case study content... 
     within -externalhtml-
     for each -section-
     grab the -contents- 
     and put it into the -containers- 
     */
-    $( "#_1-0" ).load( "cs-vw.html #_1-0" );
-        $( "#_1-1" ).load( "cs-vw.html #_1-1" );
-    $( "#_2-0" ).load( "cs-vw.html #_2-0" );
-        $( "#_2-1" ).load( "cs-vw.html #_2-1" );
-        $( "#_2-2" ).load( "cs-vw.html #_2-2" );
-        $( "#_2-3" ).load( "cs-vw.html #_2-3" );
-        $( "#_2-4" ).load( "cs-vw.html #_2-4" );
-    $( "#_3-0" ).load( "cs-vw.html #_3-0" );
-        $( "#_3-1" ).load( "cs-vw.html #_3-1" );
-        $( "#_3-2" ).load( "cs-vw.html #_3-2" );
-        $( "#_3-3" ).load( "cs-vw.html #_3-3" );
-        $( "#_3-4" ).load( "cs-vw.html #_3-4" );
-    $( "#_4-0" ).load( "cs-vw.html #_4-0" );
-        $( "#_4-1" ).load( "cs-vw.html #_4-1" );
-    $( "#_5-0" ).load( "cs-vw.html #_5-0" );
-        $( "#_5-1" ).load( "cs-vw.html #_5-1" );
-        $( "#_5-2" ).load( "cs-vw.html #_5-2" );
-    $( "#_6-0" ).load( "cs-vw.html #_6-0" );
-        $( "#_6-1" ).load( "cs-vw.html #_6-1" );
-        $( "#_6-2" ).load( "cs-vw.html #_6-2" );
-        $( "#_6-3" ).load( "cs-vw.html #_6-3" );
-        $( "#_6-4" ).load( "cs-vw.html #_6-4" );
-        $( "#_6-5" ).load( "cs-vw.html #_6-5" );
-        $( "#_6-6" ).load( "cs-vw.html #_6-6" );
-    $( "#_7-0" ).load( "cs-vw.html #_7-0" );
-        $( "#_7-1" ).load( "cs-vw.html #_7-1" );
-    $( "#_8-0" ).load( "cs-vw.html #_8-0" );
-        $( "#_8-1" ).load( "cs-vw.html #_8-1" );
-        $( "#_8-2" ).load( "cs-vw.html #_8-2" );
-        $( "#_8-3" ).load( "cs-vw.html #_8-3" );
-    $( "#_9-0" ).load( "cs-vw.html #_9-0" );
-        $( "#_9-1" ).load( "cs-vw.html #_9-1" );
-        $( "#_9-2" ).load( "cs-vw.html #_9-2" );
-
+    $( "#vw_1-0" ).load( "/volkswagen/cs-vw.html #vw_1-0" );
+        $( "#vw_1-1" ).load( "/volkswagen/cs-vw.html #vw_1-1" );
+    $( "#vw_2-0" ).load( "/volkswagen/cs-vw.html #vw_2-0" );
+        $( "#vw_2-1" ).load( "/volkswagen/cs-vw.html #vw_2-1" );
+        $( "#vw_2-2" ).load( "/volkswagen/cs-vw.html #vw_2-2" );
+        $( "#vw_2-3" ).load( "/volkswagen/cs-vw.html #vw_2-3" );
+        $( "#vw_2-4" ).load( "/volkswagen/cs-vw.html #vw_2-4" );
+    $( "#vw_3-0" ).load( "/volkswagen/cs-vw.html #vw_3-0" );
+        $( "#vw_3-1" ).load( "/volkswagen/cs-vw.html #vw_3-1" );
+        $( "#vw_3-2" ).load( "/volkswagen/cs-vw.html #vw_3-2" );
+        $( "#vw_3-3" ).load( "/volkswagen/cs-vw.html #vw_3-3" );
+        $( "#vw_3-4" ).load( "/volkswagen/cs-vw.html #vw_3-4" );
+    $( "#vw_4-0" ).load( "/volkswagen/cs-vw.html #vw_4-0" );
+        $( "#vw_4-1" ).load( "/volkswagen/cs-vw.html #vw_4-1" );
+    $( "#vw_5-0" ).load( "/volkswagen/cs-vw.html #vw_5-0" );
+        $( "#vw_5-1" ).load( "/volkswagen/cs-vw.html #vw_5-1" );
+        $( "#vw_5-2" ).load( "/volkswagen/cs-vw.html #vw_5-2" );
+    $( "#vw_6-0" ).load( "/volkswagen/cs-vw.html #vw_6-0" );
+        $( "#vw_6-1" ).load( "/volkswagen/cs-vw.html #vw_6-1" );
+        $( "#vw_6-2" ).load( "/volkswagen/cs-vw.html #vw_6-2" );
+        $( "#vw_6-3" ).load( "/volkswagen/cs-vw.html #vw_6-3" );
+        $( "#vw_6-4" ).load( "/volkswagen/cs-vw.html #vw_6-4" );
+        $( "#vw_6-5" ).load( "/volkswagen/cs-vw.html #vw_6-5" );
+        $( "#vw_6-6" ).load( "/volkswagen/cs-vw.html #vw_6-6" );
+    $( "#vw_7-0" ).load( "/volkswagen/cs-vw.html #vw_7-0" );
+        $( "#vw_7-1" ).load( "/volkswagen/cs-vw.html #vw_7-1" );
+    $( "#vw_8-0" ).load( "/volkswagen/cs-vw.html #vw_8-0" );
+        $( "#vw_8-1" ).load( "/volkswagen/cs-vw.html #vw_8-1" );
+        $( "#vw_8-2" ).load( "/volkswagen/cs-vw.html #vw_8-2" );
+        $( "#vw_8-3" ).load( "/volkswagen/cs-vw.html #vw_8-3" );
+    $( "#vw_9-0" ).load( "/volkswagen/cs-vw.html #vw_9-0" );
+        $( "#vw_9-1" ).load( "/volkswagen/cs-vw.html #vw_9-1" );
+        $( "#vw_9-2" ).load( "/volkswagen/cs-vw.html #vw_9-2" );
 });
 
-/*	Menu item highlighting */
-jQuery('#nav').singlePageNav({
+//	Menu item highlighting TEMP DISABLED...
+jQuery('#navigation').singlePageNav({
 	offset: 600,
     // offset: jQuery('#nav').outerHeight(),
 	filter: ':not(.external)',
 	speed: 1000,
 	currentClass: 'current',
-	updateHash: true,
+	updateHash: false,
     threshold: 60,
     easing: "easeInOutExpo"
-});	
+});
         
 // back to top
 var offset = 900,
@@ -136,7 +137,7 @@ $(window).scroll(function () {
     } else {
         $("#navigation").addClass("animated-header");
     }
-    var bottom_of_object = $('.text').offset().top + $('.text').innerHeight(),
+    var bottom_of_object = $('.text').offset() + $('.text').innerHeight(),
         bottom_of_window = $(window).scrollTop();
     // console.log('stopAnimation is ' + $stopAnimation);
     // console.log('object-btm is ' + bottom_of_object);
@@ -162,11 +163,11 @@ $back_to_top.on('click', function (event) {
 
 var slideHeight = $(window).height();  
 $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
-
 $(window).resize(function(){'use strict',
         $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
 });
 
+// TEMP DISABLED...
 var wow = new WOW ({
 	offset:       0,
 	mobile:       false,       // trigger animations on mobile devices
@@ -178,9 +179,54 @@ function playAudio() {
   sayit.play(); 
 } 
 
-var s = skrollr.init({
-  smoothScrolling: false,
-  forceHeight: false
-});
+// fade transition - reload
+// var speed = 'slow';
+// $('html, body').hide();
+// $(document).ready(function() {
+//     $('html, body').fadeIn(speed, function() {
+//         $('a[href], button[href]').click(function(event) {
+//             var url = $(this).attr('href');
+//             if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
+//             event.preventDefault();
+//             $('html, body').fadeOut(speed, function() {
+//                 window.location = url;
+//             });
+//         });
+//     });
 
-document.getElementById('current-year').innerHTML = new Date().getFullYear();
+// has FOUC
+// $(window).on('load', function(){
+//     $("body").css("display", "none");
+//     $("body").fadeIn(1000);
+//     $("a.transition").click(function(event){
+//             event.preventDefault();
+//             linkLocation = this.href;
+//             $("body").fadeOut(500, redirectPage);      
+//     });    
+//     function redirectPage() {
+//         window.location = linkLocation;
+//     }
+// });
+
+    // $('.ajax-popup-link').magnificPopup({
+    //     type: 'ajax',
+    //     mainClass: 'mfp-folio',
+    //     closeBtnInside: true,
+    //     closeMarkup: '<button class="mfp-close" href="#"></button>'
+    // });
+
+//$(function() {
+$(window).on('load', function(){
+    $('a.transition').each(function() { /* [1] */
+         if ( location.hostname === this.hostname || !this.hostname.length ) { /* [1] */
+            var link = $(this).attr("href"); /* [2] */
+                $(this).click(function(e) {
+                    e.preventDefault(); /* [7] */ 
+                    $('body').addClass('fadeSiteOut'); /* fadeSiteOut[8] */ 
+                    setTimeout(function() { /* [9] */
+                        window.location = link; /* [9] */
+                    }, 800); /* [9] */
+                });
+            }
+        })
+});

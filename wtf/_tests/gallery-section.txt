@@ -1,0 +1,203 @@
+<!-- start PORTFOLIO section -->
+<div class="container">
+    <div id="folio" class="portfolio">
+        <div class="sec-title">
+            <h2>Folio</h2>
+        </div>
+  <div class="no-padding portfolio_container">
+<!-- folio tile VWG -->
+<div class="col-xs-6 col-sm-4 col-lg-4 graphics">
+    <span class="portfolio_item vwg">
+        <a href="folio-vwg-lite.html" class="ajax-popup-link folio-vwg solo">
+        <img src="_assets/img/tile_vwg.png" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>VOLKSWAGEN</span>
+                    <em>Design System</em>
+                </span>
+            </span>
+        </span>
+        </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile SAM -->
+<div class="col-xs-6 col-sm-4 col-lg-4 graphics">
+    <span class="portfolio_item sam">
+        <a href="folio-sam-lite.html" class="ajax-popup-link folio-samsung solo">
+        <img src="_assets/img/tile_sam.jpg" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>SAMSUNG</span>
+                    <em>UX&nbsp;Design</em>
+                </span>
+            </span>
+        </span>
+        </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile AXS -->
+<div class="col-xs-6 col-sm-4 col-lg-4 graphics">
+    <span class="portfolio_item axs">
+    	<a href="folio-axs-lite.html" class="ajax-popup-link folio-axs">
+        <img src="_assets/img/axs_folio_tile.png" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>AXS</span>
+                    <em>UX&nbsp;Design</em>
+                </span>
+            </span>
+        </span>
+    	</a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile TWC -->
+<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 graphics">
+    <span class="portfolio_item twc">
+        <a href="folio-twc-lite.html" class="ajax-popup-link folio-twc solo">
+        <img src="_assets/img/twc_folio_tile.jpg" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>The White Company</span>
+                    <em>UX&nbsp;Design</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile TA -->
+<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 graphics">
+    <span class="portfolio_item ta">
+        <a href="folio-ta-lite.html" class="ajax-popup-link folio-ta solo">
+        <img src="_assets/img/ta_folio_tile.jpg" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>TripAdvisor</span>
+                    <em>Visual&nbsp;Design</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile SS -->
+<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 graphics">
+    <span class="portfolio_item ss">
+        <a href="folio-ss-lite.html" class="ajax-popup-link folio-ss solo">
+        <img src="_assets/img/ss_folio_tile.jpg" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>Skyscanner</span>
+                    <em>UX &amp; Visual&nbsp;Design</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile PS -->
+<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 graphics">
+    <span class="portfolio_item ps">
+        <a href="folio-ps-lite.html" class="ajax-popup-link folio-ps">
+        <img src="_assets/img/ps_folio_tile.jpg" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>PokerStars</span>
+                    <em>Visual&nbsp;Design</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile KM -->
+<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 graphics">
+    <span class="portfolio_item km">
+        <a href="folio-km-lite.html" class="ajax-popup-link folio-km solo">
+        <img src="_assets/img/km_folio_tile.jpg" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>Karen Millen</span>
+                    <em>Front-End&nbsp;Dev</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile UMG -->
+<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 graphics">
+    <span class="portfolio_item uni">
+        <a href="folio-umg-lite.html" class="ajax-popup-link folio-umg solo">
+        <img src="_assets/img/uni_folio_tile.jpg" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>Universal&nbsp;Music&nbsp;Group</span>
+                    <em>Web&nbsp;Design &amp; Dev</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile MNS -->
+<div class="col-lg-3 hidden-xs hidden-md graphics">
+    <span class="portfolio_item mns">
+        <a href="folio-mns-lite.html" class="ajax-popup-link folio-mns solo">
+        <img src="_assets/img/mns_folio_tile.png" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>Marks and Spencer</span>
+                    <em>Visual&nbsp;Design</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div> <!-- end folio tile -->
+<!-- folio tile MOREDARK -->
+<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 graphics">
+    <span class="portfolio_item moredark">
+        <a href="folio-moredark-lite.html" class="ajax-popup-link folio-moredark">
+        <img src="_assets/img/moredark_folio_tile.png" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>view more</span>
+                    <em>Design</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div><!-- end folio tile -->
+<!-- folio tile MORE 
+<div class="col-lg-3 col-sm-4 col-xs-6 graphics">
+    <span class="portfolio_item more">
+        <a href="folio-more-lite.html" class="ajax-popup-link folio-more">
+        <img src="_assets/img/mns_folio_tile.png" alt="image" class="img-responsive" />
+        <span class="portfolio_item_hover">
+            <span class="portfolio-border clearfix">
+                <span class="item_info">
+                    <span>view more</span>
+                    <em>Design</em>
+                </span>
+            </span>
+        </span>
+    </a>
+    </span>
+</div> end folio tile -->
+
+</div><!-- end portfolio_container -->
+</div><!-- portfolio -->
+</div><!-- end PORTFOLIO section -->

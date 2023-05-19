@@ -1,0 +1,45 @@
+  <script>
+$('[data-fancybox]').fancybox({
+	loop: true,
+	infobar: false,
+	idleTime: 0,
+	transitionEffect: "slide",
+	touch: false,
+	wheel: false,
+	scrollBar: true,
+	// hash: false,
+	ajax: {
+    	settings: {
+    		data: {
+        		fancybox: true
+      		}
+    	}
+  	},
+  	Navigation: {
+  		parentEl: ".fancybox-inner"
+  	},
+  	 thumbs : {
+	    autoStart : true,
+	    axis : 'x',
+	    parentEl : '.fancybox-inner'
+  	},
+    btnTpl: {
+	    close:
+	      '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
+	      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z"/></svg>' +
+	      "</button>",
+	    arrowLeft:
+	      '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="Previous">' +
+	      '<div><i class="fal fa-angle-double-left"></i></div>' +
+	      "</button>",
+	    arrowRight:
+	      '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="Next">' +
+	      '<div><i class="fal fa-angle-double-right"></i></div>' +
+	      "</button>"
+  	},
+  	// Custom CSS class for layout
+	baseClass : '',
+	// Custom CSS class for slide element
+	slideClass : ''
+});
+  </script>

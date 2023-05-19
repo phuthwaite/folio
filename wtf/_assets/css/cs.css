@@ -1,31 +1,37 @@
 /*== CS Pages
 ==================================================================*/
+html {background-color: white;}
 body.cs {
-    margin-top: 80px;
-     background-color: var(--bg-grey-100);
-/*    background-color: bisque;*/
+   padding-top: 44px;
+     background-color: var(--bg-grey-200);
 }
-/*body.cs section {background: rgba(230,230,230,1);}*/
 body.cs main {
     max-width: 1024px;
     margin: 0 auto;
-    box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    background-color: white;
-/*    , 0 -30px 30px -10px white*/
-
+    background-color: var(--bg-grey-100);
 }
-body.cs main .container {
-/*    background-color: red;
-    box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.4), 0 -30px 30px -10px white;*/
-}
-
 body.cs main section {
     position: relative;
-    z-index: 1000!important;
+   z-index: 1002;
+   background-color: transparent;
+}
+.cs .studies section {
+    background-repeat: no-repeat;
+}
+.cs #vwg #hero{
+    background-color: transparent;
+    background-image: url('/_assets/img/cs/vw/vw-hero.png');
+    background-repeat: no-repeat;
+    background-size: 52%;
+    background-position: 110% 90%;
+}
+.shape-blob {
+    z-index: 1001;
 }
 .cs .studies p { 
-    color: var(--ph_darktext, #e6e6e6);
+    color: var(--ph-darktext, #e6e6e6);
     margin-bottom: 12px;
     font-size: 14px;
     width: 94%;
@@ -56,7 +62,7 @@ body.cs main section {
     color: var(--vw-primary);
 }
 .cs .studies h6 {
-/*    color: rgb(var(--ph_primary));*/
+/*    color: rgba(var(--ph_primary));*/
     color: var(--vw-primary);
     margin-bottom: 0;
     margin-top: 30px;
@@ -70,7 +76,7 @@ body.cs main section {
 }
 .cs h6.line:after {
     border-top: 1px solid var(--vw-lite);
-/*  border-top: 1px solid rgb(var(--ph_primary));*/
+/*  border-top: 1px solid rgba(var(--ph_primary));*/
   content: '';
   display: table-cell;
   position: relative;
@@ -87,9 +93,9 @@ body.cs main section {
     color: white!important;}
 .cs .case-nav .row {
     height: 100%; width: 100%; display: inline;}
-    .cs #navigation {
+/*    .cs #navigation {
         border-bottom: 8px solid var(--vw-primary);
-    }
+    }*/
 #cs-prev i, #cs-prev p {
     float:left; padding-right: 12px; border: 1px solid blue; display: block; height: 50px;}
 #cs-next i, #cs-next p {
@@ -100,8 +106,7 @@ body.cs main section {
     font-size: 1em;
     display: block;
     line-height: 1.2em;
-    margin-bottom: 10px;
-    border: 1px solid pink;}
+    margin-bottom: 10px;}
 .cs main.studies ul li:before { content: "-"; margin-right: 6px;}
 .cs .studies .hero-header {
     padding-bottom: 24px;
@@ -217,14 +222,6 @@ margin-bottom: 0;
 .cs .img-framed.sm:last-child {
     margin-right: 0;
 }
-
-/*.cs .img-framed.sm img {width: auto;}*/
-/*.cs .img-inline { 
-    display: inline-block;
-
-}
-.cs .img-inline img { 
-    }*/
 .cs .img-inline {
     display: flex;
   }
@@ -237,7 +234,7 @@ margin-bottom: 0;
   }
 .cs p.captiontext {
     font-size: 0.9em; 
-    color: var(--ph_midtext); 
+    color: var(--ph-midtext); 
     margin: 20px 0 0 0; 
     font-style: italic; 
 }
@@ -261,21 +258,13 @@ p.cs-tag {
     border-radius: 4px; 
     display: inline-block; 
     background-color: var(--bg-grey-300); 
-    color: var(--ph_darktext)!important; 
+    color: var(--ph-darktext)!important; 
     font-size: 10px!important; font-weight: 600!important;
     letter-spacing: .6px!important; 
     text-transform: uppercase; 
     margin-right: 6px; 
     width: auto!important;
 }
-.padding-0 {    padding: 0 !important; }
-.padding-xs {   padding: 4px !important; }
-.padding-sm {   padding: 8px !important; }
-/* unspecified/standard bootstrap padding is 15px */
-.padding-md {   padding: 24px !important; }
-.padding-lg {   padding: 32px !important; }
-.padding-xl {   padding: 44px !important; }
-
 
 
 
@@ -286,46 +275,17 @@ p.cs-tag {
 .parallax.bg-img.shadow {
     box-shadow: inset 0 0 100px -10px rgba(0, 0, 0, 0.6);
 }
-.cs .studies section {
-    background-repeat: no-repeat;
-}
-.cs #vwg #hero {
-    background-image: url('../img/cs/vw/vw-hero.png');
-    background-repeat: no-repeat;
-    background-size: 52%;
-    background-position: 110% 92%;
-}
-/*blurry shapes in background...*/
-/*.cs .studies#vwg section { 
-    border: 1px solid red;
-    background-image: url('../img/cs/vw/vw-bg-1.png'); 
-    background-size: 70%;
-    background-position: center right;
-    overflow: visible;
- }
- */
-/* no longer needed/being used...
-.cs #vwg #para-0 { 
-    background-image: url('../img/cs/vw/home-case-vw-mob.png'); 
-    width: 100%; 
-    background-size: 100%; 
-    background-position: top center; 
-    height: 440px; 
-    overflow: hidden; 
-    box-shadow: none; }
-.cs #vwg #para-0 img {
-        width: 90%; padding-top: 10px; margin-top: -240px; }*/
 
-.cs #vwg #para-1 { 
-    background-image: url('https://loremflickr.com/1200/600/car,motorway,drive');
+.cs #vwg b {
+    font-weight: 600;
+    color: var(--ph-darktext);
 }
-.cs #vwg #para-2 { 
-    background-image: url('https://loremflickr.com/1200/600/campervan,vw');
+@media (min-width: 1200px) {
+    .cs .navbar-header { margin-left: -50px; }
+    }
+@media (min-width: 1060px) and (max-width: 1199px) {
+    .cs .navbar-header { margin-left: -78px; }
 }
-.cs #vwg #para-4 { 
-    height: auto; 
-}
-
 @media (min-width: 768px){
     .cs .studies section .container .mod-50 {
         height: 218px;
@@ -339,7 +299,7 @@ p.cs-tag {
      }
     .shape-wrap {
         float: right;
-        shape-outside: url('../img/cs/vw/vw-planning.png');
+        shape-outside: url('/_assets/img/cs/vw/vw-planning.png');
         height: 500px;
         transform: translateX(32px);
     }
@@ -349,6 +309,7 @@ p.cs-tag {
 /*    #cards>div:not(:last-child) {padding-right: 16px;}*/
 }
 @media (max-width: 767px){
+    .cs .navbar-header { margin-left: 0; }
     .cs .studies p {
         width: 100%;
     }
@@ -387,11 +348,29 @@ p.cs-tag {
     }
     .cs #vwg #hero {
         background-image: none;
-/*        border: 1px solid green;
-        width: 100%;
-    background-image: url('../img/cs/vw/vw-hero.png');
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: 200%;*/
 }
+}
+.cs #navigation {
+    height: 48px;
+    border-bottom: 4px solid var(--vw-primary);
+    color: var(--ph-litetext);
+    font-size: 13px;
+}
+.cs #navigation a {
+    color: var(--ph-litetext);
+    border-bottom: 1px dotted rgba(200,200,200,0.4);
+}
+.cs #navigation a:hover {
+    color: white;
+border-bottom: 1px solid rgba(240,240,240,0.8);
+}
+.cs #navigation .container {
+    padding: 8px 36px;
+    max-width: 1024px;
+}
+#navigation.animated-header {
+    padding: 0;
+}
+.cs .cd-top, .cs .cd-top:hover {
+    background-color: var(--vw-primary);
 }
