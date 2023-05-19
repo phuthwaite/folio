@@ -1,0 +1,8 @@
+onCancel: 		Called to abort the call to open Fancybox
+beforeLoad: 	Called just before Fancybox starts loading the content it is going to display
+afterload: 		Called just after Fancybox finishes loading the content it is going to display
+beforeShow: 	Called just before Fancybox starts opening
+afterShow: 		Called just after Fancybox finishes opening
+beforeClose: 	Called just before Fancybox starts closing
+afterClose: 	Called just after Fancybox finishes closing
+onUpdate: 		Called after the window is resized to change the orientation of the window (for tablets or phones), or when the user scrolls the window

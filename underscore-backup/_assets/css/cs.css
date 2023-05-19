@@ -1,0 +1,376 @@
+/*== CS Pages
+==================================================================*/
+html {background-color: white;}
+body.cs {
+   padding-top: 44px;
+     background-color: var(--bg-grey-200);
+}
+body.cs main {
+    max-width: 1024px;
+    margin: 0 auto;
+    box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: var(--bg-grey-100);
+}
+body.cs main section {
+    position: relative;
+   z-index: 1002;
+   background-color: transparent;
+}
+.cs .studies section {
+    background-repeat: no-repeat;
+}
+.cs #vwg #hero{
+    background-color: transparent;
+    background-image: url('/_assets/img/cs/vw/vw-hero.png');
+    background-repeat: no-repeat;
+    background-size: 52%;
+    background-position: 110% 90%;
+}
+.shape-blob {
+    z-index: 1001;
+}
+.cs .studies p { 
+    color: var(--ph-darktext, #e6e6e6);
+    margin-bottom: 12px;
+    font-size: 14px;
+    width: 94%;
+    line-height: 1.5em;
+}
+.cs .studies h1 {
+    color: black;
+    font-weight: 600;
+    font-size: 36px;
+}
+.cs .studies img.logo {
+/*    margin-bottom: 16px;*/
+}
+.cs .studies h2 {
+    color: black;
+    font-weight: 500;
+    letter-spacing: .6px; 
+    margin-top: 0;
+    font-size: 24px;
+    padding-bottom: 2%;
+}
+.cs .studies h3 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .8px; 
+/*    color: black;*/
+    color: var(--vw-primary);
+}
+.cs .studies h6 {
+/*    color: rgba(var(--ph_primary));*/
+    color: var(--vw-primary);
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.cs h6.line {
+  display: table;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 30px 0 15px;
+}
+.cs h6.line:after {
+    border-top: 1px solid var(--vw-lite);
+/*  border-top: 1px solid rgba(var(--ph_primary));*/
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.5em;
+  width: 100%;
+  left: 1.5%;
+}
+.cs .case-nav {
+    background-color: black;
+    color: white;}
+.cs .case-nav div {
+    border: 1px solid white; 
+    display: block;
+    color: white!important;}
+.cs .case-nav .row {
+    height: 100%; width: 100%; display: inline;}
+/*    .cs #navigation {
+        border-bottom: 8px solid var(--vw-primary);
+    }*/
+#cs-prev i, #cs-prev p {
+    float:left; padding-right: 12px; border: 1px solid blue; display: block; height: 50px;}
+#cs-next i, #cs-next p {
+    float:right; padding-left: 12px;border: 1px solid blue; height: 50px;}
+/*.cs main.studies { margin-top: 12px;}*/
+.cs main.studies ul {  column-count: 2; column-gap: 8%;}
+.cs main.studies ul li {
+    font-size: 1em;
+    display: block;
+    line-height: 1.2em;
+    margin-bottom: 10px;}
+.cs main.studies ul li:before { content: "-"; margin-right: 6px;}
+.cs .studies .hero-header {
+    padding-bottom: 24px;
+}
+.cs .studies section {
+    padding: 0; 
+}
+.cs .studies section .container {
+    /*border: 1px solid green; 
+    padding: 0;
+    padding-top: 16px; padding-bottom: 16px;*/
+    padding: 8px 36px;
+    max-width: 1024px;
+/*    background-color: white;*/
+}
+.cs .studies section .container .row {
+    margin: 10px 0; 
+/*    border: 1px solid red;*/
+}
+.cs .studies section .container div div h3 {
+    padding-top: 0!important;
+}
+/*.cs .studies section .container div div:not(:first-of-type) h3 {padding-top: 32px!important; }*/
+.cs hr {
+/*    height: 10%; */
+    width: auto;
+    height: 24px;
+    border: 0!important;
+    margin-top: 0;
+    margin-bottom: 0;
+    /*border: 1px solid red; 
+    background-color: black;*/
+}
+.cs hr.mob {
+    display: none;
+    }
+.cs .studies section .parallax {
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+}
+.cs .studies section .parallax img {
+    width: 80%;
+    height: auto;
+    padding: 40px 0 0;
+}
+.cs .studies section .container .mod-50 {
+    height: auto;
+    padding: 0 15px; 
+    margin: 40px 0;
+}
+.cs .studies section .container .mod-50>div {
+    background-color: var(--bg-grey-200);
+}
+.cs .studies section .container .mod-50 p {
+    width: 96%;
+margin-bottom: 0;
+}
+.display-flex-center {
+    display: flex;
+    align-items: center; 
+}
+#cards>div {
+    padding: 8px; 
+}
+.cs .studies .card {
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.23);
+    background-color: #FFFFFF;
+    height: 100%;
+    padding-bottom: 24px;
+    max-width: 400px; 
+}
+.cs .studies .card img {
+    padding-bottom: 24px;
+    max-width: 440px;
+    border-radius: 6px 6px 0 0; 
+}
+.cs .studies .card div h3, .cs .studies .card div p {
+    padding: 0 16px; 
+    width: 100%;
+}
+/* center content within cols */
+.col-center * {margin: 0 auto;}
+.cs .framed {
+    background: white;
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin: 0 auto; 
+}
+.cs .framed p {
+    width: 100%;
+}
+.cs .img-framed {
+    width: 100%;
+    height: auto;
+    background: var(--bg-grey-200);
+    border: 12px solid var(--bg-grey-200); 
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.3);
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    position: relative;
+}
+.cs .img-framed.sm {
+    width: 49%; 
+    height: auto;
+    border: 8px solid var(--bg-grey-200);
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+    margin-right: 2%;
+    padding: 0;
+    padding-bottom: 32px;
+}
+.cs .img-framed.sm:last-child {
+    margin-right: 0;
+}
+.cs .img-inline {
+    display: flex;
+  }
+.cs .img-inline img {
+    display: block;
+    flex-basis: 0px;
+    width: 0px;
+    height: auto;
+    margin: 8px;
+  }
+.cs p.captiontext {
+    font-size: 0.9em; 
+    color: var(--ph-midtext); 
+    margin: 20px 0 0 0; 
+    font-style: italic; 
+}
+.cs .captiontext.mob {
+    text-align: center;
+    }
+.cs .img-framed p.captiontext {
+    position: absolute;
+    bottom: 0;
+    vertical-align: bottom;
+    }
+.object-fit-cover {
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover; 
+    padding: 0; 
+    overflow: hidden; 
+}
+p.cs-tag {
+    padding: 2px 8px; 
+    border-radius: 4px; 
+    display: inline-block; 
+    background-color: var(--bg-grey-300); 
+    color: var(--ph-darktext)!important; 
+    font-size: 10px!important; font-weight: 600!important;
+    letter-spacing: .6px!important; 
+    text-transform: uppercase; 
+    margin-right: 6px; 
+    width: auto!important;
+}
+
+
+
+/******** images for case studies ********/
+.parallax.bg-img.overlay {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+}
+.parallax.bg-img.shadow {
+    box-shadow: inset 0 0 100px -10px rgba(0, 0, 0, 0.6);
+}
+
+.cs #vwg b {
+    font-weight: 600;
+    color: var(--ph-darktext);
+}
+@media (min-width: 1200px) {
+    .cs .navbar-header { margin-left: -50px; }
+    }
+@media (min-width: 1060px) and (max-width: 1199px) {
+    .cs .navbar-header { margin-left: -78px; }
+}
+@media (min-width: 768px){
+    .cs .studies section .container .mod-50 {
+        height: 218px;
+    }
+    div#_8-3.framed {
+        margin-left: 40px;
+    }
+    .cs .studies p.text-wrap {
+        width: 100%;
+        margin: 0 48px 48px 0;
+     }
+    .shape-wrap {
+        float: right;
+        shape-outside: url('/_assets/img/cs/vw/vw-planning.png');
+        height: 500px;
+        transform: translateX(32px);
+    }
+    .cs .captiontext.mob {
+        display: none;
+    }
+/*    #cards>div:not(:last-child) {padding-right: 16px;}*/
+}
+@media (max-width: 767px){
+    .cs .navbar-header { margin-left: 0; }
+    .cs .studies p {
+        width: 100%;
+    }
+    .card {
+        margin: 0 auto; max-width: 340px;}
+    div#_8-3.framed {
+        margin-left: 0;
+    }
+    .cs hr.mob {
+        display: block;
+        width: 100%;
+    }
+    .text-wrap {
+        margin: 0; 
+        text-align: left!important;
+    }
+    .shape-wrap {
+      float: none;
+      clear: both; 
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    .cs .img-inline {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .cs .img-inline img {
+        display: block;
+        width: 80%!important;
+        margin: 0 auto;
+        }
+    .cs .captiontext.dt {
+        display: none;
+    }
+    .cs #vwg #hero {
+        background-image: none;
+}
+}
+.cs #navigation {
+    height: 48px;
+    border-bottom: 4px solid var(--vw-primary);
+    color: var(--ph-litetext);
+    font-size: 13px;
+}
+.cs #navigation a {
+    color: var(--ph-litetext);
+    border-bottom: 1px dotted rgba(200,200,200,0.4);
+}
+.cs #navigation a:hover {
+    color: white;
+border-bottom: 1px solid rgba(240,240,240,0.8);
+}
+.cs #navigation .container {
+    padding: 8px 36px;
+    max-width: 1024px;
+}
+#navigation.animated-header {
+    padding: 0;
+}
+.cs .cd-top, .cs .cd-top:hover {
+    background-color: var(--vw-primary);
+}
