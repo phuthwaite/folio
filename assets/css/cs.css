@@ -22,7 +22,7 @@ body.cs main section {
 }
 .cs #vwg #hero{
     background-color: transparent;
-    background-image: url('/_assets/img/cs/vw/vw-hero.png');
+    background-image: url('../img/cs/vw/vw-hero.png');
     background-repeat: no-repeat;
     background-size: 52%;
     background-position: 110% 90%;
@@ -299,7 +299,7 @@ p.cs-tag {
      }
     .shape-wrap {
         float: right;
-        shape-outside: url('/_assets/img/cs/vw/vw-planning.png');
+        shape-outside: url('../img/cs/vw/vw-planning.png');
         height: 500px;
         transform: translateX(32px);
     }

@@ -678,10 +678,6 @@ vertical-align: middle;
     line-height: 22px;
     margin-bottom: 10px;
 }
-#contact ul li a i {
-    color: #fff;
-    margin-right: 12px;
-}
 #contact ul li a {
     color: #fff;
     font-size: 15px;
@@ -691,23 +687,28 @@ vertical-align: middle;
     margin-bottom: 8px;
 }
 #contact ul li a i {
+    color: #fff;
     background-color: rgba(var(--ph_primary), 0.4);
     height: 36px;
     width: 36px;
     line-height: 36px;
     text-align: center;
     font-size: 16px;
+    margin-right: 12px;
 }
 #contact ul li a:hover i {
     background-color: rgba(var(--ph_primary), 1)
 }
-#contact img {
+#contact img.poggs {
     height: 120px;
     width: auto;
     float: right;
     border: 2px solid white;
     border-radius: 50%;
     vertical-align: middle;
+}
+#contact img.yuno {
+    height: 18px; width: 18px;
 }
 
 /* back to top
