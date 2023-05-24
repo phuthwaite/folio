@@ -48,77 +48,13 @@ function splitLetters(word) {
 changeWord();
 setInterval(changeWord, 2000); 
 
-// $(window).scroll(function() {
-//       var scroll = $(this).scrollTop();
-//       var someHeight = window.innerHeight;
-//       if (scroll < someHeight) {
-//         stopAnimation = false;
-//           changeWord();
-//   setInterval(changeWord, 2000);  
-//       }
-//         else {
-//           stopAnimation = true;
-//         }
-//         return false;
-//       }); //end scroll function
-
-            // var theObjectContainer = document.getElementsByClassName('text');
-
-
-// const $getItDone = (function() {
-//       // var scroll = (window).scrollTop();
-//       var theObjectContainer =  document.querySelectorAll('.text');
-//       var bottom_of_object = theObjectContainer.top + theObjectContainer.height;
-//       var bottom_of_window = window.scrollTop + window.innerHeight;
-//       var scrollAmount = window.innerHeight - window.scrollTop;
-//       console.log('object-btm is ' + bottom_of_object);
-//       console.log('window-btm is ' + bottom_of_window);
-//       console.log('scroll amount is ' + scrollAmount);
-//             /* If the object is completely visible in the window, play it */
-//             if( scrollAmount >= bottom_of_object ){
-//             // if( bottom_of_window <= bottom_of_object ){
-//                 console.log('yay');
-//                 stopAnimation = false; 
-//                   changeWord();
-//                   setInterval(changeWord, 2000);      
-//             }
-//             else{
-//               console.log('aww');
-//                 stopAnimation = true;
-//             }
-// });
-
-// function playOrNot(){
-// var bottom_of_object = $('.text').offset().top + $('.text').outerHeight();
-// var bottom_of_window = $(window).scrollTop() + $(window).height();
-// var scrollAmount = $(window).height() - $(window).scrollTop();
-// // console.log('object-btm is ' + bottom_of_object);
-// // console.log('window-btm is ' + bottom_of_window);
-// console.log('scroll amount is ' + scrollAmount);
-// /* If the object is completely visible in the window, play it */
-// if( scrollAmount >= bottom_of_object ){
-// // if( bottom_of_window <= bottom_of_object ){
-//     console.log('yay');
-//     changeWord();
-//     setInterval(changeWord, 2000);    
-// }
-// else{
-//   console.log('aww');
-// }
-// }
-
-
-// futile attempt at IntersectionObserver shiz...
-// const IO = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       const state = (entry.intersectionRatio >= 0.75) ? 'running' : 'paused';
-//       entry.target.style.setProperty('--animps', state);
-//     }
-//   });
-// }, { threshold: [0.25, 0.75] }
-// );
-// const elements = document.querySelectorAll('.letter');
-// elements.forEach(animation => {
-//   IO.observe(animation);
-// });
+$('.text>p').on('click', function (event) {
+  if ($stopAnimation == true) {
+        $stopAnimation = false;
+        // console.log('playing');
+      }
+        else {
+          $stopAnimation = true;
+          // console.log('aww, stopped');
+        }
+      });

@@ -64,7 +64,7 @@ $(function() {
     // Page.init();
 });
 
-var $stopAnimation = false;
+
 
 $(document).ready(function(){
 document.getElementById('current-year').innerHTML = new Date().getFullYear();
@@ -110,46 +110,54 @@ document.getElementById('current-year').innerHTML = new Date().getFullYear();
         $( "#vw_9-2" ).load( "/volkswagen/cs-vw.html #vw_9-2" );
 });
 
-//	Menu item highlighting TEMP DISABLED...
+//	Menu item nav...
 jQuery('#navigation').singlePageNav({
-	offset: 600,
+	offset: 0,
     // offset: jQuery('#nav').outerHeight(),
 	filter: ':not(.external)',
 	speed: 1000,
 	currentClass: 'current',
 	updateHash: false,
-    threshold: 60,
+    threshold: 600,
     easing: "easeInOutExpo"
 });
-        
+
+var $stopAnimation = false;    
+
 // back to top
 var offset = 900,
     offset_opacity = 1200,
     scroll_top_duration = 700,
     $back_to_top = $('.cd-top');
 
+
+
 $(window).scroll(function () {
 	($(this).scrollTop() > offset) ? 
         $back_to_top.addClass('cd-is-visible') : 
         $back_to_top.removeClass('cd-is-visible cd-fade-out');
     if ($(window).scrollTop() > 400) {
+        $stopAnimation = true;
         $("#navigation").removeClass("animated-header");
     } else {
+        $stopAnimation = false;
         $("#navigation").addClass("animated-header");
     }
+
     var bottom_of_object = $('.text').offset() + $('.text').innerHeight(),
         bottom_of_window = $(window).scrollTop();
     // console.log('stopAnimation is ' + $stopAnimation);
     // console.log('object-btm is ' + bottom_of_object);
-    //console.log('scroll is ' + bottom_of_window);
-    if ( bottom_of_object >= bottom_of_window )
-        { $stopAnimation = false; }
-    else 
-        { $stopAnimation = true; }
+    // console.log('scroll is ' + bottom_of_window);
+
+    // if ( bottom_of_object >= bottom_of_window )
+    //     { $stopAnimation = false; }
+    // else 
+    //     { $stopAnimation = true; }
 
 // var element = $('footer');
 // console.log('footer position is ' + element.position());
-//console.log('footer offset is ' + element.offset());
+// console.log('footer offset is ' + element.offset());
 // console.log('footer dist to top is ' + element.offset().top + ' window bottom is at ' +bottom_of_window + 'px');
 
 }); // end scroll function  

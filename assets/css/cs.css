@@ -281,7 +281,7 @@ p.cs-tag {
     color: var(--ph-darktext);
 }
 @media (min-width: 1200px) {
-    .cs .navbar-header { margin-left: -50px; }
+/*    .cs .navbar-header { margin-left: -50px; }*/
     }
 @media (min-width: 1060px) and (max-width: 1199px) {
     .cs .navbar-header { margin-left: -78px; }
@@ -357,15 +357,15 @@ p.cs-tag {
     font-size: 13px;
 }
 .cs #navigation a {
-    color: var(--ph-litetext);
-    border-bottom: 1px dotted rgba(200,200,200,0.4);
+    
+/*    border-bottom: 1px dotted rgba(200,200,200,0.4);*/
 }
 .cs #navigation a:hover {
     color: white;
-border-bottom: 1px solid rgba(240,240,240,0.8);
+/*border-bottom: 1px solid rgba(240,240,240,0.8);*/
 }
 .cs #navigation .container {
-    padding: 8px 36px;
+    padding: 8px 0;
     max-width: 1024px;
 }
 #navigation.animated-header {
@@ -373,4 +373,9 @@ border-bottom: 1px solid rgba(240,240,240,0.8);
 }
 .cs .cd-top, .cs .cd-top:hover {
     background-color: var(--vw-primary);
+}
+.cs .navbar-right {
+    color: var(--ph-litetext);
+    text-align: right;
+    margin-right: 0;
 }
