@@ -17,6 +17,9 @@ body.cs main section {
    z-index: 1002;
    background-color: transparent;
 }
+.cs .navbar-header {
+    float: left;
+}
 .cs .studies section {
     background-repeat: no-repeat;
 }
@@ -365,8 +368,7 @@ p.cs-tag {
 /*border-bottom: 1px solid rgba(240,240,240,0.8);*/
 }
 .cs #navigation .container {
-    padding: 8px 0;
-    max-width: 1024px;
+    padding-top: 8px;
 }
 #navigation.animated-header {
     padding: 0;
@@ -377,5 +379,6 @@ p.cs-tag {
 .cs .navbar-right {
     color: var(--ph-litetext);
     text-align: right;
-    margin-right: 0;
+    margin-right: -4px;
+    float: right;
 }

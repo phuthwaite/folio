@@ -224,17 +224,22 @@ function playAudio() {
     // });
 
 //$(function() {
-$(window).on('load', function(){
-    $('a.transition').each(function() { /* [1] */
-         if ( location.hostname === this.hostname || !this.hostname.length ) { /* [1] */
-            var link = $(this).attr("href"); /* [2] */
-                $(this).click(function(e) {
-                    e.preventDefault(); /* [7] */ 
-                    $('body').addClass('fadeSiteOut'); /* fadeSiteOut[8] */ 
-                    setTimeout(function() { /* [9] */
-                        window.location = link; /* [9] */
-                    }, 800); /* [9] */
-                });
-            }
-        })
-});
+// $(document).ready(function(){
+// $(window).on('load', function(){});
+$('a.transition').each(function() { /* [1] */
+     if ( location.hostname === this.hostname || !this.hostname.length ) { /* [1] */
+        var link = $(this).attr("href"); /* [2] */
+            $(this).click(function(e) {
+                e.preventDefault(); /* [7] */ 
+                $('body').addClass('fadeSiteOut'); /* fadeSiteOut[8] */ 
+                setTimeout(function() { /* [9] */
+                    window.location = link; /* [9] */
+                }, 800); /* [9] */
+            });
+        }
+    })
+window.onpageshow = function (event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};

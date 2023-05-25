@@ -229,7 +229,7 @@ header#back-nav .container a { position: absolute; top: 8px; left: 12px; display
 header#back-nav .container a i {margin-right: 8px;}*/
 /*header .container {border: none;}*/
 header .ident {background: transparent; padding: 10px 6px;  display: inline-block; outline: none;}
-.cs header .ident {padding: 0 6px; margin-left: -5px;}
+.cs header .ident {padding: 0 6px; }
 header .ident img { height: 22px; width: auto; }
 /*header .ident:hover {background: rgba(255,255,255,0.6);}*/
 header .ident .ph {
