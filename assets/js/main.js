@@ -243,3 +243,22 @@ window.onpageshow = function (event) {
         window.location.reload();
     }
 };
+
+
+$(document).ready(function(){
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        return array;
+    };
+    var arr = ['assets/img/bg/13_insta@_poggs.jpg', 'assets/img/bg/canarywharf_insta@_poggs.jpg', 'assets/img/bg/gourock_insta@_poggs.jpg', 'assets/img/bg/londonbridge_insta@_poggs.jpg', 'assets/img/bg/myrkdalen_insta@_poggs.jpg', 'assets/img/bg/palmsprings_insta@_poggs.jpg', 'assets/img/bg/takethat_insta@_poggs.jpg'];
+    arr = shuffle(arr);
+    // console.log("1st of arr is " + arr[1]);
+    document.getElementById('home-slider').style.backgroundImage = "url('" + arr[1] + "')";
+});
