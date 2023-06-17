@@ -1,0 +1,11 @@
+# ignore wip.html
+volkswagen/index-wip.html
+volkswagen/cs-vw-wip.html
+
+_folio[23]-domain-deets.txt
+
+# ignore all .DS_Store
+**.DS_Store
+
+# ignore all WIP
+# *wip
