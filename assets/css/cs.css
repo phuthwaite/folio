@@ -291,7 +291,7 @@ p.cs-tag {
 }
 @media (min-width: 768px){
     .cs .studies section .container .mod-50 {
-        height: 218px;
+        min-height: 218px;
     }
     div#_8-3.framed {
         margin-left: 40px;
