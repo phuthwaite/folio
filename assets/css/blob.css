@@ -1,7 +1,7 @@
-main#vwg {
+main {
 	position: relative;
 }
-main#vwg img {
+main img {
     z-index: 1002!important;
 }
 .shape-blob {
