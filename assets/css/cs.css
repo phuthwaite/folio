@@ -30,6 +30,13 @@ body.cs main section {
     background-size: 52%;
     background-position: 110% 90%;
 }
+.cs #sam #hero{
+    background-color: transparent;
+    background-image: url('../img/cs/sam/home-case-sam.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 96% 100%;
+}
 .shape-blob {
     z-index: 1001;
 }
@@ -42,7 +49,7 @@ body.cs main section {
 }
 .cs .studies h1 {
     color: black;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 36px;
 }
 .cs .studies img.logo {
@@ -62,11 +69,11 @@ body.cs main section {
     font-weight: 600;
     letter-spacing: .8px; 
 /*    color: black;*/
-    color: var(--vw-primary);
+    color: var(--client-primary);
 }
 .cs .studies h6 {
 /*    color: rgba(var(--ph_primary));*/
-    color: var(--vw-primary);
+    color: var(--client-primary);
     margin-bottom: 0;
     margin-top: 30px;
 }
@@ -78,7 +85,7 @@ body.cs main section {
   padding: 0 30px 0 15px;
 }
 .cs h6.line:after {
-    border-top: 1px solid var(--vw-lite);
+    border-top: 1px solid var(--client-lite);
 /*  border-top: 1px solid rgba(var(--ph_primary));*/
   content: '';
   display: table-cell;
@@ -132,6 +139,10 @@ body.cs main section {
 .cs .studies section .container div div h3 {
     padding-top: 0!important;
 }
+
+.cs #sam.studies section .container {
+/*    border: 2px solid red;*/
+    }
 /*.cs .studies section .container div div:not(:first-of-type) h3 {padding-top: 32px!important; }*/
 .cs hr {
 /*    height: 10%; */
@@ -192,6 +203,9 @@ margin-bottom: 0;
     padding: 0 16px; 
     width: 100%;
 }
+.cs #sam.studies .card {
+    padding: 24px 0;
+    }
 /* center content within cols */
 .col-center * {margin: 0 auto;}
 .cs .framed {
@@ -349,15 +363,17 @@ p.cs-tag {
     .cs .captiontext.dt {
         display: none;
     }
-    .cs #vwg #hero {
+    .cs #vwg #hero, .cs #sam #hero {
         background-image: none;
 }
 }
+/*rgba(var(--client_primary), 0.5)*/
 .cs #navigation {
     height: 48px;
-    border-bottom: 4px solid var(--vw-primary);
+    border-bottom: 4px solid var(--bg-grey-900);
     color: var(--ph-litetext);
     font-size: 13px;
+    box-shadow: none;
 }
 .cs #navigation a {
     
@@ -374,11 +390,22 @@ p.cs-tag {
     padding: 0;
 }
 .cs .cd-top, .cs .cd-top:hover {
-    background-color: var(--vw-primary);
+    background-color: var(--client-primary);
 }
 .cs .navbar-right {
     color: var(--ph-litetext);
     text-align: right;
     margin-right: -4px;
     float: right;
+}
+
+.progress {
+     position: fixed;
+     top: 44px;
+     left: 0;
+     height: 4px;
+     background-color: var(--client-primary);
+     transition: all linear 0.1s;
+/*     min-width: 1%;*/
+     border-radius: 0;
 }

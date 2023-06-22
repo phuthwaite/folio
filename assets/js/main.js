@@ -108,6 +108,28 @@ document.getElementById('current-year').innerHTML = new Date().getFullYear();
     $( "#vw_9-0" ).load( "/volkswagen/cs-vw.html #vw_9-0" );
         $( "#vw_9-1" ).load( "/volkswagen/cs-vw.html #vw_9-1" );
         $( "#vw_9-2" ).load( "/volkswagen/cs-vw.html #vw_9-2" );
+
+
+    $( "#sam_0-0" ).load( "/samsung/cs-sam.html #sam_0-0" );
+        $( "#sam_0-1" ).load( "/samsung/cs-sam.html #sam_0-1" );
+    $( "#sam_1-0" ).load( "/samsung/cs-sam.html #sam_1-0" );
+        $( "#sam_1-1" ).load( "/samsung/cs-sam.html #sam_1-1" );
+        $( "#sam_1-2" ).load( "/samsung/cs-sam.html #sam_1-2" );
+    $( "#sam_2-0" ).load( "/samsung/cs-sam.html #sam_2-0" );
+        $( "#sam_2-1" ).load( "/samsung/cs-sam.html #sam_2-1" );
+        $( "#sam_2-2" ).load( "/samsung/cs-sam.html #sam_2-2" );
+        $( "#sam_2-3" ).load( "/samsung/cs-sam.html #sam_2-3" );
+        $( "#sam_2-4" ).load( "/samsung/cs-sam.html #sam_2-4" );
+        $( "#sam_2-5" ).load( "/samsung/cs-sam.html #sam_2-5" );
+    $( "#sam_3-0" ).load( "/samsung/cs-sam.html #sam_3-0" );
+        $( "#sam_3-1" ).load( "/samsung/cs-sam.html #sam_3-1" );
+        $( "#sam_3-2" ).load( "/samsung/cs-sam.html #sam_3-2" );
+        $( "#sam_3-3" ).load( "/samsung/cs-sam.html #sam_3-3" );
+        $( "#sam_3-4" ).load( "/samsung/cs-sam.html #sam_3-4" );
+
+   // $( "#axs_1-0" ).load( "/axs/cs-axs.html #axs_1-0" );
+
+   // $( "#twc_1-0" ).load( "/twc/cs-twc.html #twc_1-0" );
 });
 
 //	Menu item nav...
@@ -262,3 +284,12 @@ $(document).ready(function(){
     // console.log("1st of arr is " + arr[1]);
     document.getElementById('home-slider').style.backgroundImage = "url('" + arr[1] + "')";
 });
+
+$(document).on("scroll", function(){
+  var pixels = $(document).scrollTop();
+  var pageHeight = $(document).height() - $(window).height();
+  var progress = 100 * pixels / pageHeight;
+  
+  $("div.progress").css("width", progress + "%");
+})
+
