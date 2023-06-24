@@ -214,6 +214,7 @@ margin-bottom: 0;
     width: 100%;
     margin: 0 auto; 
 }
+.cs .framed.sm {width: 49%;}
 .cs .framed p {
     width: 100%;
 }
@@ -302,6 +303,7 @@ p.cs-tag {
     }
 @media (min-width: 1060px) and (max-width: 1199px) {
     .cs .navbar-header { margin-left: -78px; }
+        .cs .row .img {width: 100%;}
 }
 @media (min-width: 768px){
     .cs .studies section .container .mod-50 {
@@ -335,6 +337,10 @@ p.cs-tag {
     div#_8-3.framed {
         margin-left: 0;
     }
+    .cs .framed.sm {width: 100%; }
+    .cs .framed.sm:not(:last-of-type){
+        margin-bottom: 24px;
+    }
     .cs hr.mob {
         display: block;
         width: 100%;
@@ -350,6 +356,7 @@ p.cs-tag {
       height: auto;
       margin: 0 auto;
     }
+    .cs .row .img {width: 100%;}
     .cs .img-inline {
         display: block;
         width: 90%;
@@ -359,6 +366,9 @@ p.cs-tag {
         display: block;
         width: 80%!important;
         margin: 0 auto;
+        }
+        .cs img.mob-wider {
+            width: 100% !important;
         }
     .cs .captiontext.dt {
         display: none;

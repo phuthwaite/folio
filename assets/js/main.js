@@ -115,6 +115,9 @@ document.getElementById('current-year').innerHTML = new Date().getFullYear();
     $( "#sam_1-0" ).load( "/samsung/cs-sam.html #sam_1-0" );
         $( "#sam_1-1" ).load( "/samsung/cs-sam.html #sam_1-1" );
         $( "#sam_1-2" ).load( "/samsung/cs-sam.html #sam_1-2" );
+        $( "#sam_1-3" ).load( "/samsung/cs-sam.html #sam_1-3" );
+        $( "#sam_1-4" ).load( "/samsung/cs-sam.html #sam_1-4" );
+        $( "#sam_1-5" ).load( "/samsung/cs-sam.html #sam_1-5" );
     $( "#sam_2-0" ).load( "/samsung/cs-sam.html #sam_2-0" );
         $( "#sam_2-1" ).load( "/samsung/cs-sam.html #sam_2-1" );
         $( "#sam_2-2" ).load( "/samsung/cs-sam.html #sam_2-2" );
@@ -126,6 +129,7 @@ document.getElementById('current-year').innerHTML = new Date().getFullYear();
         $( "#sam_3-2" ).load( "/samsung/cs-sam.html #sam_3-2" );
         $( "#sam_3-3" ).load( "/samsung/cs-sam.html #sam_3-3" );
         $( "#sam_3-4" ).load( "/samsung/cs-sam.html #sam_3-4" );
+        $( "#sam_3-5" ).load( "/samsung/cs-sam.html #sam_3-5" );
 
    // $( "#axs_1-0" ).load( "/axs/cs-axs.html #axs_1-0" );
 
