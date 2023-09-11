@@ -136,6 +136,8 @@ document.getElementById('current-year').innerHTML = new Date().getFullYear();
    // $( "#twc_1-0" ).load( "/twc/cs-twc.html #twc_1-0" );
 });
 
+var $stopAnimation = false;   
+
 //	Menu item nav...
 jQuery('#navigation').singlePageNav({
 	offset: 0,
@@ -148,14 +150,11 @@ jQuery('#navigation').singlePageNav({
     easing: "easeInOutExpo"
 });
 
-var $stopAnimation = false;    
-
 // back to top
 var offset = 900,
     offset_opacity = 1200,
     scroll_top_duration = 700,
     $back_to_top = $('.cd-top');
-
 
 
 $(window).scroll(function () {
@@ -187,6 +186,27 @@ $(window).scroll(function () {
 // console.log('footer dist to top is ' + element.offset().top + ' window bottom is at ' +bottom_of_window + 'px');
 
 }); // end scroll function  
+
+/////////////////////////////
+// poggs does ani
+// $('#navigation>*').on('click', function (event) {  
+//   if (('.navbar-collapse.in') && ($stopAnimation == false)) {
+//     console.log('stop ani');
+//     $stopAnimation = true;
+//   }
+//   else {
+//     console.log('restart ani');
+//     $stopAnimation = false;
+//   }
+// }); 
+
+// $('#navigation>*').on('click', function (event) {  
+//   if ('.navbar-collapse.in') {
+//     console.log('stop ani');
+//     $stopAnimation.toggle;
+//   }
+// });
+//////////////////////////////
 
 $back_to_top.on('click', function (event) {
     	event.preventDefault();

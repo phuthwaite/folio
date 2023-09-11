@@ -52,9 +52,9 @@ $('.text>p').on('click', function (event) {
   if ($stopAnimation == true) {
         $stopAnimation = false;
         // console.log('playing');
-      }
-        else {
-          $stopAnimation = true;
-          // console.log('aww, stopped');
-        }
-      });
+  }
+  else {
+        $stopAnimation = true;
+        // console.log('aww, stopped');
+  }
+});

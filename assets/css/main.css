@@ -229,7 +229,7 @@ header#back-nav .container a { position: absolute; top: 8px; left: 12px; display
 header#back-nav .container a i {margin-right: 8px;}*/
 /*header .container {border: none;}*/
 header .ident {background: transparent; padding: 10px 6px;  display: inline-block; outline: none;}
-.cs header .ident {padding: 0 6px; }
+.cs header .ident {padding: 8px; margin-left: -8px;}
 header .ident img { height: 22px; width: auto; }
 /*header .ident:hover {background: rgba(255,255,255,0.6);}*/
 header .ident .ph {
@@ -890,6 +890,7 @@ margin-bottom: 60px;
     #about .message-body {margin-bottom: 45px;}
     #about .welcome-block img {margin: 0 25px 15px 0;}
     .textblock, .textblock.lister {padding: 0 40px; margin-bottom: 20px;}
+    
     .footer-content {width: 100%;}
     .container { max-width: 580px;}
     #about .welcome-block h3 {margin: 0 0 35px;}
@@ -905,21 +906,22 @@ margin-bottom: 60px;
     .row.case.vw img.case-img {display: none;}
     .row.case.vw img.case-img.mob {display: block!important;}
     .footer-content {width: 380px;}
-
-.text {
-  width: 300px;
-  left: 50%;
-  margin-left: -150px;
-  display: block;
-}
-.text h1 { margin-left: 15px; }
-.text p {
-  font-size: 50px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  height: 90px;
-}
-.poggsdoes {  width: 300px; }
+    .text {
+      width: 300px;
+      left: 50%;
+      margin-left: -150px;
+      display: block;
+    }
+    a.audio i {display: none;}
+    .text a h1 { margin-left: 0; margin-right: 0;}
+    .text p {
+      font-size: 50px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      height: 90px;
+    }
+    .poggsdoes {  width: 300px; }
+    .folio-slide .folio-pics img {height: auto!important; max-height: auto!important;}
 }
 
 /* /animation */
