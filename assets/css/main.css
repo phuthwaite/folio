@@ -922,6 +922,14 @@ margin-bottom: 60px;
     }
     .poggsdoes {  width: 300px; }
     .folio-slide .folio-pics img {height: auto!important; max-height: auto!important;}
+    .poggs {display: none;}
+    .folio-slide .description,
+    .folio-slide .folio-pics {
+        padding-top: 40px;
+    }
+
+    .folio-slide .description .folio-detail-label {
+        width: 100%;}
 }
 
 /* /animation */
