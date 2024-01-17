@@ -306,7 +306,7 @@ $(document).ready(function(){
     var arr = ['assets/img/bg/13_insta@_poggs.jpg', 'assets/img/bg/canarywharf_insta@_poggs.jpg', 'assets/img/bg/gourock_insta@_poggs.jpg', 'assets/img/bg/londonbridge_insta@_poggs.jpg', 'assets/img/bg/myrkdalen_insta@_poggs.jpg', 'assets/img/bg/palmsprings_insta@_poggs.jpg', 'assets/img/bg/takethat_insta@_poggs.jpg'];
     arr = shuffle(arr);
     // console.log("1st of arr is " + arr[1]);
-    document.getElementById('home-slider').backgroundImage = "url('" + arr[1] + "')";
+    $("#home-slider").css("background-image", "url(" + arr[1] + ")");
 });
 
 $(document).on("scroll", function(){

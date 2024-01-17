@@ -315,7 +315,7 @@ nav ul li.activenav .hover-underline:after {
     padding: 0;
     margin-top: 64px;
     background-color: rgba(0,0,0,0.75);
-    background-image: url('../img/bg/takethat_insta@_poggs.jpg');
+/*    background-image: url('../img/bg/takethat_insta@_poggs.jpg');*/
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -927,9 +927,9 @@ margin-bottom: 60px;
     .folio-slide .folio-pics {
         padding-top: 40px;
     }
-
     .folio-slide .description .folio-detail-label {
-        width: 100%;}
+        width: 100%;
+    }
 }
 
 /* /animation */
