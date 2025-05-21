@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Parameter Appender with Date Range Picker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+            background-color: rgba(0,0,0,0.05);
+            padding: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select, input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            cursor: pointer;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid gray;
+        }
+        select:focus-visible, .flatpickr-input:focus-visible, .flatpickr-input.active {
+            outline: 1px solid transparent; 
+            border:  1px solid #4bc0b5;
+        }
+        .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+    background: #86f2e7;
+    box-shadow: none;
+    color: #293a45;
+    border-color: #86f2e7;
+        }
+        .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+    box-shadow: -10px 0 0 #86f2e7;
+}
+.flatpickr-day.inRange {
+    border-radius: 0;
+    box-shadow: -5px 0 0 #86f2e7, 5px 0 0 #86f2e7;
+}
+.flatpickr-day.inRange, .flatpickr-day.prevMonthDay.inRange, .flatpickr-day.nextMonthDay.inRange, .flatpickr-day.today.inRange, .flatpickr-day.prevMonthDay.today.inRange, .flatpickr-day.nextMonthDay.today.inRange, .flatpickr-day:hover, .flatpickr-day.prevMonthDay:hover, .flatpickr-day.nextMonthDay:hover, .flatpickr-day:focus, .flatpickr-day.prevMonthDay:focus, .flatpickr-day.nextMonthDay:focus {
+    cursor: pointer;
+    outline: 0;
+    background: #86f2e7;
+    border-color: #86f2e7;
+}   
+        button {
+            padding: 10px 15px;
+            background-color: #4bc0b5;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4bc0b49c;
+        }
+        button:disabled {
+            background-color: #ccc;
+            color: white;
+            cursor: not-allowed;
+        }
+        .helper-text {
+            position: absolute;
+            top: 8px;
+            right: 0;
+            color: #d46f31;
+            font-size: 10px;
+            padding: 5px;
+            font-style: italic;
+        }
+        .url-output {
+            margin-top: 20px;
+            font-size: 12px;    
+            word-wrap: break-word;
+        }
+        #open-url {
+            height: 50px; 
+            font-size: 18px; 
+            font-weight: bold;
+            /* padding: 30px 60px; */
+            width: 200px;
+            
+        }
+        .radio-group {
+            margin: 10px auto;
+            }
+        .radio-option {display: inline-block;
+        }
+        .radio-option label {cursor: pointer;}
+        .radio-option button {
+            display: inline-block;
+            padding: 8px 16px 4px;
+            /* background-color: #e0e0e0; */
+            border: 1px solid transparent;
+            background-color: white; color: black; border: 1px solid gray;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+        }
+        .radio-option button:hover {
+            background-color: #9fe8e1f5;
+            border: 1px solid #005670;
+            transition:  0.25s;
+            box-shadow: 0px 2px 3px rgba(0,0,0,0.4);
+        }
+        .radio-option button:active {
+            box-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+        }
+        .radio-option button.selected {
+            background-color: #9fe8e1f5;
+            border: 1px solid #005670;
+        }
+        .radio-option input[type="radio"] {
+            display: none;
+        }
+        /* .radio-option, .radio-group input, .radio-group label {
+            display: inline-block;
+        }
+        .radio-option label {margin-right: 10px; cursor: pointer;}
+        .radio-option input {display: block; background-color: white; color: black; border: 1px solid gray; cursor: pointer; padding:4px 8px;}
+        .radio-option input:hover {
+            background-color: #4bc0b5;
+            transition:  0.25s;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+        }
+        button.selected {border: 1px solid red!important;} */
+        
+/* #open-url:after {
+  content: '✈';
+  position: absolute;
+  opacity: 1;  
+  top: 16px;
+  right: 10px;
+  transform: translateX(0px); 
+  transition:  0.5s;
+  
+}
+button {
+  border-radius: 4px;
+  background-color: #5ca1e1;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0,.7);
+}
+button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+button:hover{
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 40px;
+  transform: translateX(30px);
+}
+@keyframes plane {
+  0%    { opacity: 0; }
+  50%   { opacity: 1; }
+  100%  { opacity: 1; }
+} */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Dummy Consumer Trip</h2>
+                <!-- <div class="form-group">
+            <label for="base-url">Base URL:</label>
+            <input type="text" id="base-url" placeholder="https://example.com" />
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="base-url">Partner: Kiwi</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <button onclick="selectOption('base-url', 'kiwi')">
+                        <input type="radio" id="base-url-kiwi" name="base-url" value="kiwi">
+                        <label for="base-url-kiwi">Kiwi</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('base-url', 'numastays')">
+                        <input type="radio" id="base-url-numastays" name="base-url" value="numastays">
+                        <label for="base-url-numastays">Numa</label>
+                    </button>
+                </div>
+            </div>
+        </div> -->
+        <div class="form-group">
+            <label for="base-url">Partner:</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <button onclick="selectOption('base-url', 'kiwi')">
+                        <input type="radio" id="base-url-kiwi" name="base-url" value="kiwi">
+                        <label for="base-url-kiwi">Kiwi</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('base-url', 'numastays')">
+                        <input type="radio" id="base-url-numastays" name="base-url" value="numastays">
+                        <label for="base-url-numastays">Numa</label>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="param2">Destination:</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <button onclick="selectOption('param2', 'London')">
+                        <input type="radio" id="param2-London" name="param2" value="London">
+                        <label for="param2-London">London</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param2', 'Rome')">
+                        <input type="radio" id="param2-Rome" name="param2" value="Rome">
+                        <label for="param2-Rome">Rome</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param2', 'Berlin')">
+                        <input type="radio" id="param2-Berlin" name="param2" value="Berlin">
+                        <label for="param2-Berlin">Berlin</label>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="param3">PAX:</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <button onclick="selectOption('param3', '1')">
+                        <input type="radio" id="1" name="param3" value="1">
+                        <label for="1">1</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param3', '2')">
+                        <input type="radio" id="2" name="param3" value="2">
+                        <label for="2">2</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param3', '3')">
+                        <input type="radio" id="3" name="param3" value="3">
+                        <label for="3">3</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param3', '4')">
+                        <input type="radio" id="4" name="param3" value="4">
+                        <label for="4">4</label>
+                    </button>
+                </div>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="param4">Consumer name:</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <button onclick="selectOption('param4', 'Aiaza')">
+                        <input type="radio" id="Aiaza" name="param4" value="Aiaza">
+                        <label for="Aiaza">Aiaza</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param4', 'Hannah')">
+                        <input type="radio" id="Hannah" name="param4" value="Hannah">
+                        <label for="optionB">Hannah</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param4', 'Poggs')">
+                        <input type="radio" id="Poggs" name="param4" value="Poggs">
+                        <label for="optionC">Poggs</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param4', 'Shahina')">
+                        <input type="radio" id="Shahina" name="param4" value="Shahina">
+                        <label for="optionD">Shahina</label>
+                    </button>
+                </div>
+                <div class="radio-option">
+                    <button onclick="selectOption('param4', 'Vineet')">
+                        <input type="radio" id="Vineet" name="param4" value="Vineet">
+                        <label for="optionE">Vineet</label>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="date-range">Trip Date Range:</label>
+            <span id="helper-text" class="helper-text">Required</span>
+            <input type="text" id="date-range" placeholder="Select a date range" />
+        </div>
+        <button id="generate-url" onclick="generateUrl()" disabled>Generate URL</button>
+        <div class="url-output" id="url-output"></div>
+        <button id="open-url" style="display: none;" onclick="openUrl()">GO! </button>
+    </div>
+
+    <script>
+        // Initialize flatpickr for date range selection with future dates only
+        flatpickr("#date-range", {
+            mode: "range",
+            dateFormat: "Y-m-d",
+            minDate: "today",  // Only allow future dates
+            onChange: function(selectedDates) {
+                const generateButton = document.getElementById('generate-url');
+                const helperText = document.getElementById('helper-text');
+                if (selectedDates.length === 2) {
+                    // Store the start and end dates as hidden fields
+                    document.getElementById('start-date').value = selectedDates[0].toISOString().split('T')[0];
+                    document.getElementById('end-date').value = selectedDates[1].toISOString().split('T')[0];
+                    helperText.style.display = 'none';
+                    generateButton.disabled = false;  // Enable button when both dates are selected
+                } else {
+                    helperText.style.display = 'block';
+                    generateButton.disabled = true;  // Disable button if both dates are not selected
+                }
+            }
+        });
+
+        function selectOption(param, value) {
+            document.querySelectorAll(`input[name="${param}"]`).forEach(input => {
+                input.parentElement.classList.remove('selected');
+            });
+            const selectedButton = document.querySelector(`input[name="${param}"][value="${value}"]`).parentElement;
+            selectedButton.classList.add('selected');
+            selectedButton.querySelector('input').checked = true;
+        }
+
+        function generateUrl() {
+            // const baseUrl = document.getElementById('base-url')?.value || '';
+            const baseUrl = document.querySelector('input[name="base-url"]:checked').value;
+            //const param1 = document.getElementById('param1').value;
+            const param2 = document.querySelector('input[name="param2"]:checked').value;
+            const param3 = document.querySelector('input[name="param3"]:checked').value;
+            // const param4 = document.getElementById('param4').value;
+            const param4 = document.querySelector('input[name="param4"]:checked').value;
+            const startDate = document.getElementById('start-date').value;
+            const endDate = document.getElementById('end-date').value;
+            
+            const finalUrl = `https://experiences.${encodeURIComponent(baseUrl)}.com/?consumerTrip.destinationName=${encodeURIComponent(param2)}&consumerTrip.consumer.givenName=${encodeURIComponent(param4)}&consumerTrip.arrivalDate=${encodeURIComponent(startDate)}&consumerTrip.departureDate=${encodeURIComponent(endDate)}&consumerTrip.personCount=${encodeURIComponent(param3)}`;
+
+            document.getElementById('url-output').innerText = `Generated URL:\n${finalUrl}`;
+            document.getElementById('open-url').style.display = 'block';
+            document.getElementById('open-url').setAttribute('data-url', finalUrl);
+        }
+
+        function openUrl() {
+            const url = document.getElementById('open-url').getAttribute('data-url');
+            window.open(url, '_blank');
+        }
+    </script>
+    <!-- Hidden fields to store the start and end dates -->
+    <input type="hidden" id="start-date" />
+    <input type="hidden" id="end-date" />
+</body>
+</html>
+
+<!-- https://experiences.kiwi.com/?consumerTrip.destinationName=London&consumerTrip.consumer.givenName=Aiaza&consumerTrip.arrivalDate=2024-08-26&consumerTrip.departureDate=2024-08-27&consumerTrip.personCount=1
+-->
